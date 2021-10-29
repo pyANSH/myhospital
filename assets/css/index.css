@@ -1,78 +1,226 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300;1,400&display=swap');
-*{
-    margin: 0;
-    padding: 0%;
-    font-family: 'poppins';
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,200;1,300;1,400&display=swap");
+* {
+  margin: 0;
+  padding: 0%;
+  font-family: "poppins";
+  box-sizing: border-box;
+  
 }
 
-:root{
-    --background-color:white;
-    --text-color:black;
-    --heading-color:black;
-    --theme-color: linear-gradient(45deg, rgba(0,122,255,1) 35%, rgb(0, 140, 255) 100%);
-    --light-color-text: rgb(83, 81, 81);;
+:root {
+  --background-color: #e4e9ee;
+  --text-color: black;
+  --heading-color: black;
+  --theme-color: linear-gradient(
+    45deg,
+    rgb(67, 157, 253) 35%,
+    rgb(0, 94, 255) 100%
+  );
+  --theme-color-2: #2f3140;
+  --theme-color-2: #64677f;
+  --light-color-text: rgb(255, 250, 250);
 
-    --header-font:12px;
-    --title-font:64px;
-    --sub-title-font:16px;
+  --header-font: 12px;
+  --title-font: 64px;
+  --sub-title-font: 16px;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+li {
+  list-style-type: none;
+}
+body{
+    background: var(--background-color);
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.logo__img {
+  width: 50px;
+  height: 50px;
+}
+.navlist {
+  display: flex;
+}
+.navlist li {
+  padding: 0 1rem;
+}
+.navlist li a {
+  font-size: var(--header-font);
+}
+.navlist li a:hover {
+  color: var(--theme-color);
+}
+.login__button {
+  padding: 0.5rem 1.5rem;
+  margin: 1rem;
+  border: none;
+  background: var(--theme-color);
+  border-radius: 4px;
+  color: var(--background-color);
+  font-size: var(--header-font);
+}
+.hero {
+  background: url(../img/hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  min-height: 100vh;
+}
+.height {
+  min-height: 100vh;
+}
+.circle {
+  border-radius: 50%;
+}
+.services {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5rem 2rem;
+  min-height: 50vh;
+}
+.card__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  width: fit-content;
+  padding: 0 2rem;
+  margin: 0 auto;
+  background: var(--theme-color-2);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card {
+  height: 350px;
+  width: 300px;
+  background: var(--theme-color-2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 4px;
+}
+.scard__img {
+  margin: 1rem;
+  background: var(--theme-color-3);
+  height: 50px;
+}
+.card h4,
+.card p {
+  background: transparent;
+  color: var(--light-color-text);
+  font-weight: 400;
+}
+.card p {
+  font-size: 12px;
+  font-weight: 200;
+}
+.card:hover {
+  transform: translateY(-30px);
+  transition: ease-in-out 0.3s all;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background: var(--theme-color);
+}
+
+
+.section__title{
+    font-size: 32px;
     color: var(--text-color);
+    font-weight: 500;
+    text-align: center;
+    /* margin: 2rem 0; */
 }
-li{
-    list-style-type: none;
+.section__subtitle{
+    font-size:16px;
+    color: var(--text-color);
+    font-weight: 300;
+    text-align: center;
+    /* margin: 2rem 0; */
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    height: 3rem;
-    margin: 0 3rem;
-}
-.logo__img{
-    width: 50px;
-    height: 50px;
-}
-.navlist{
-    display: flex;
-
-}
-.navlist li{
-    padding: 0 1rem;
-}
-.navlist li a{
-    font-size: var(--header-font);
-}
-.navlist li a:hover{
-    color: var(--theme-color);
-}
-.login__button{
-    padding: 0.5rem 1.5rem;
-    margin: 1rem;
-    border: none;
-    background: var(--theme-color);
-    border-radius: 4px;
-    color: var(--background-color);
-    font-size: var(--header-font);
-}
-.hero{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 100vh;
-}
-.hero__left{
-    display:flex;
-    flex-direction: column;
-}
-.hero__left h1{
-    font-size: var(--title-font);
-}
-.hero__left h3{
-    font-size: var(--sub-title-font);
-    color: var(--light-color-text);
+.heading {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+.blog-cards {
+  display: flex;
+  margin: 5rem 3rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.first-card {
+    background: url(https://mlgnf4rufwgf.i.optimole.com/Scv8_g-LPWAePRH/w:auto/h:auto/q:auto/https://hospital.vimspawapuri.org/wp-content/uploads/2020/03/14.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  height: 29rem;
+  width: 320px;
+  padding: 33px;
+  margin: 1rem;
+}
 
+.card-positions {
+  position: relative;
+  top: 34%;
+}
+.blog-name {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  font-weight: lighter;
+}
+.blog-content {
+  padding: 20px 0 20px 0;
+  color: white;
+  text-align: justify;
+}
+.blog-content h4 {
+  color: rgb(230, 219, 219);
+}
+.second-card {
+    background: url(https://mlgnf4rufwgf.i.optimole.com/Scv8_g-LPWAePRH/w:auto/h:auto/q:auto/https://hospital.vimspawapuri.org/wp-content/uploads/2020/03/14.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  height: 29rem;
+  width: 320px;
+  padding: 33px;
+  margin: 1rem;
+}
+
+.third-card {
+  background: url(https://mlgnf4rufwgf.i.optimole.com/Scv8_g-LPWAePRH/w:auto/h:auto/q:auto/https://hospital.vimspawapuri.org/wp-content/uploads/2020/03/14.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 16px;
+  height: 29rem;
+  width: 320px;
+  padding: 33px;
+  margin: 1rem;
+}
+.button {
+  padding: 15px;
+  background: var(--theme-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+}
+@media screen and (max-width: 555px) {
+  .blog-cards {
+    margin: 1rem 0;
+  }
+}
